@@ -11,7 +11,7 @@ import os, sys
 # import modele
 
 def get_args(): 
-	parser = argparse.ArgumentParser(description="Script to launch jigsaw training", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+	parser = argparse.ArgumentParser(description="Script to launch defi-ia training", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 	parser.add_arguement("--data_path", type = str, help = "path to a folder containing all the data files") 
 	parser.add_argument("--output_folder", type = str,  help = "path to an input folder where to output your model and predictions") 
 	return parser.parse_args()
