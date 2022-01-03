@@ -9,7 +9,7 @@
 -> Dossier utils avec les fichiers.py: pre_processing / features_engineering / 
 -> Un train.py à run en ligne de commande
 -> PDF du rapport
--> Fichier requirements.txt
+-> Fichier requirements.txt (cf module pipreqs pour génération automatique)
 ----------------------------
 
 --- Structure du code ---
