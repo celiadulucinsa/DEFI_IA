@@ -2,7 +2,9 @@
 
 --- A mettre sur le git ---
 -> Notebooks explications de la démarche 
--> Readme 
+-> Readme (resultats avec les temps de calcul et la machine, 
+	installations à faire pour reproduire le code, 
+	ligne de commandes pour reproduire les résultats)
 -> Dossier data avec les forecasts arpège et arome 
 -> Dossier utils avec les fichiers.py: pre_processing / features_engineering / 
 -> Un train.py à run en ligne de commande
