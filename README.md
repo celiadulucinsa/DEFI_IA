@@ -1,10 +1,11 @@
 # Defi-IA-2022
 Défi IA 2022 (Kaggle)
 
+<a href="https://www.kaggle.com/c/defi-ia-2022" title = "Defi-IA 2022">
 <p align="center" href="https://www.kaggle.com/c/defi-ia-2022">
   <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png" width="120" alt="Kaggle">
 </p>
-
+</a>
 
 Team: STEC
 
