@@ -44,15 +44,15 @@ lien2
 ### Option 1: if you have downloaded all the data on your computer
 
 
-- Run the train.py, with the following options : 
+- Run the train.py, with the following arguments: 
   - data_path = './data_station/', 
   - output_folder an output folder, where you will get the predictions
   - preprocessing:
     - *Option 1 (if you have downloaded all the data on your computer):* preprocessing = TRUE
-```
-python train.py --data_path = './data_station' -- output_folder = 'an output folder' --preprocessing = TRUE
-```
-    - *Option 1 (if you have downloaded all the data on your computer):* preprocessing = TRUE
+    
+      ```
+      python train.py --data_path = './data_station' -- output_folder = 'an output folder' --preprocessing = TRUE
+      ```
     - *Option 2 (if you have downloaded the final dataset with the preprocessing already done):* preprocessing = FALSE
 ```
 python train.py --data_path = './data_station' -- output_folder = <OUTPUT_FOLDER> --preprocessing = FALSE
