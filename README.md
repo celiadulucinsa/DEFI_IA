@@ -1,7 +1,7 @@
 # Defi-IA-2022
 Défi IA 2022 (Kaggle)
 
-![logo_kaggle](https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png) { width=50% }
+![logo_kaggle](https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png){:height="36px" width="36px"}
 
 Team: STEC
 
