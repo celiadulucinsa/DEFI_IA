@@ -1,10 +1,9 @@
 # Defi-IA-2022
 Défi IA 2022 (Kaggle)
 
-![logo_kaggle](https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png){:height="36px" width="36px"}
-  
+
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png" width="40" alt="Kaggle">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png" width="120" alt="Kaggle">
 </p>
 
 
