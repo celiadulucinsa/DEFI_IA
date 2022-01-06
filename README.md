@@ -2,10 +2,12 @@
 Défi IA 2022 (Kaggle)
 
 ![logo_kaggle](https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png){:height="36px" width="36px"}
+  
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png" width="40" alt="Kaggle">
+</p>
 
-<a href="https://www.kaggle.com/" ><img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png" style="float:center; max-width: 30px" alt="Kaggle"/>
-  
-  
+
 Team: STEC
 
 Members: Célia Duluc, Thomas Nivelet, Elisa Escanez, Sébastien Castets
@@ -45,9 +47,6 @@ https://drive.google.com/file/d/1UFRhVIOeXBG0N-5KFDnzRbrnmJhPbCKY/view?usp=shari
 lien2
 ```
 ## Train the model and get the predictions
-
-### Option 1: if you have downloaded all the data on your computer
-
 
 - Run the train.py, with the following arguments: 
   - data_path = './data_station/', 
