@@ -3,7 +3,7 @@ Défi IA 2022 (Kaggle)
 
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png" width="120" alt="Kaggle">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png" width="120" alt="Kaggle" href="https://www.kaggle.com/c/defi-ia-2022">
 </p>
 
 
