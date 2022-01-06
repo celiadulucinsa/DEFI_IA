@@ -2,7 +2,7 @@
 Défi IA 2022 (Kaggle)
 
 <a href="https://www.kaggle.com/c/defi-ia-2022" title = "Defi-IA 2022">
-<p align="center" href="https://www.kaggle.com/c/defi-ia-2022">
+<p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png" width="120" alt="Kaggle">
 </p>
 </a>
@@ -12,6 +12,13 @@ Team: STEC
 Members: Célia Duluc, Thomas Nivelet, Elisa Escanez, Sébastien Castets
 
 INSA Toulouse - 5th year (Applied Mathematics)
+
+<a href="http://www.insa-toulouse.fr/" title = "INSA Toulouse">
+<p align="center">
+  <img src="https://jpo.insa-toulouse.fr/wp-content/uploads/2020/11/Logo_INSAToulouse-quadri.png" width="120" alt="INSA Toulouse">
+</p>
+</a>
+
 
 Objective: Predict the accumulated daily rainfall on the D day on the observation ground stations.
 
