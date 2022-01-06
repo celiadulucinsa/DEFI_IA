@@ -39,10 +39,28 @@ sh unzip_data.sh
 https://drive.google.com/file/d/1UFRhVIOeXBG0N-5KFDnzRbrnmJhPbCKY/view?usp=sharing
 lien2
 ```
+## Train the model and get the predictions
+
+### Option 1: if you have downloaded all the data on your computer
 
 
+- Run the train.py, with the following options : 
+  - data_path = './data_station/', 
+  - output_folder an output folder, where you will get the predictions
+  - **preprocessing = TRUE**
 
+```
+python train.py --data_path = './data_station' -- output_folder = 'an output folder' --preprocessing = TRUE
+```
 
+### Option 2: if you have downloaded the final dataset (with the preproceessing already done) on your computer
 
+- Run the train.py, with the following options : 
+  - data_path = './data_station/', 
+  - output_folder an output folder, where you will get the predictions
+  - **preprocessing = FALSE**
 
+```
+python train.py --data_path = './data_station' -- output_folder = 'an output folder' --preprocessing = FALSE
+```
 
