@@ -89,15 +89,15 @@ def add_forecast3D(df_train, df_X_test, coords):
 def preprocessing():
 
 
-    path_coords = './Other/Other/'
-    path_train = './Train/Train/'
-    path_test = './Test/Test/'
-    path_baseline ='./Test/Test/Baselines/'
+    path_coords = './data_station/'
+    path_train = './data_station/'
+    path_test = './data_station/'
+    path_baseline ='./data_station/'
 
     coords, df_X_train, df_X_test, df_Y_train, baseline = pre_traitement.load_datasets(path_coords, path_train, path_test, path_baseline)
     
     # treatement X_station
-    df_train = tratement_train(df_X_train, coords, df_Y_train)
+    df_train = treatement_train(df_X_train, coords, df_Y_train)
     df_X_test = treatement_test(df_X_test, coords)
     
     #treatement forecast data
