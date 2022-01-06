@@ -4,13 +4,15 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import argparse
 import os, sys
+sys.path.append("utils/")
+
 
 # Imports personal libraries
 # import pre_traitement 
 # import features_engineering
-from utils import training 
-from utils import prediction
-from utils import preprocessing
+import training 
+import prediction
+import preprocessing
 
 def get_args(): 
 	parser = argparse.ArgumentParser(description="Script to launch defi-ia training", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -29,7 +31,7 @@ def main():
  		os.makedirs(output_folder)
 	
 	if args.preprocessing: #option1
-		df_train, df_X_test = preprocessing.preprocessing()
+        df_train, df_X_test = preprocessing.preprocessing()
 
  	else: #option2
 		df_train = pd.read_csv("df_train.csv")  ##### quand ces excels ok -> mettre les bons noms sur le drive + mettre bons liens dans readme
