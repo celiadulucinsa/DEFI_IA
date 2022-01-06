@@ -1,6 +1,7 @@
 # Defi-IA-2022
 Défi IA 2022 (Kaggle)
 
+![logo_kaggle](https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png) 
 Team: STEC
 
 Members: Célia Duluc, Thomas Nivelet, Elisa Escanez, Sébastien Castets
@@ -12,7 +13,7 @@ Objective: Predict the accumulated daily rainfall on the D day on the observatio
 
 ## Download data
 
-- Option 1 : download all the data on your computer. Warning : data size of 80Gb and time consuming !
+- Option 1 : download all the data on your computer. Warning : data size of 80Gb and time consuming!
 - Option 2 : download the final dataset with all the preprocessing already done. 
 
 ### Option 1
@@ -46,14 +47,14 @@ lien2
 
 - Run the train.py, with the following arguments: 
   - data_path = './data_station/', 
-  - output_folder an output folder, where you will get the predictions
+  - output_folder: an output folder, where you will get the predictions,
   - preprocessing:
     - *Option 1 (if you have downloaded all the data on your computer):* preprocessing = TRUE
       ```
-      python train.py --data_path = './data_station' -- output_folder = 'an output folder' --preprocessing = TRUE
+      python train.py --data_path = './data_station' --output_folder = <OUTPUT_FOLDER> --preprocessing = TRUE
       ```
     - *Option 2 (if you have downloaded the final dataset with the preprocessing already done):* preprocessing = FALSE
       ```
-      python train.py --data_path = './data_station' -- output_folder = <OUTPUT_FOLDER> --preprocessing = FALSE
+      python train.py --data_path = './data_station' --output_folder = <OUTPUT_FOLDER> --preprocessing = FALSE
       ```
 
