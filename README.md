@@ -15,7 +15,7 @@ INSA Toulouse - 5th year (Applied Mathematics)
 
 <a href="http://www.insa-toulouse.fr/" title = "INSA Toulouse">
 <p align="center">
-  <img src="https://jpo.insa-toulouse.fr/wp-content/uploads/2020/11/Logo_INSAToulouse-quadri.png" width="120" alt="INSA Toulouse">
+  <img src="https://jpo.insa-toulouse.fr/wp-content/uploads/2020/11/Logo_INSAToulouse-quadri.png" width="160" alt="INSA Toulouse">
 </p>
 </a>
 
