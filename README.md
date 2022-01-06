@@ -1,7 +1,8 @@
 # Defi-IA-2022
 Défi IA 2022 (Kaggle)
 
-![logo_kaggle](https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png) 
+![logo_kaggle](https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png) { width=50% }
+
 Team: STEC
 
 Members: Célia Duluc, Thomas Nivelet, Elisa Escanez, Sébastien Castets
