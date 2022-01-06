@@ -137,7 +137,7 @@ def chargement_data_test(date, path, model) :
     model: type string, modele choisit'''
 
     fname = path + "%s_%s.nc" %(model, str(date))
-    print(fname)
+    #print(fname)
     data = xr.open_dataset(fname)
     return data
 
@@ -165,7 +165,7 @@ def add_prevision(p,df_distance, df_X, path, model,var, bool_train = True):
             if bool_train : 
                 data = chargement_data_train(pd.to_datetime(d) + dt.timedelta(days = 1), path, model)
             else : 
-                data = chargement_data_test(d+1, path, model )
+                data = chargement_data_test(d, path, model )
                 
         except : #exception si il n'y a pas de fichier forecast à cette date
             #print("pas de fichier forecast à la date :", d)
