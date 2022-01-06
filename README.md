@@ -52,6 +52,7 @@ lien2
 
 ```
 python train.py --data_path = './data_station' -- output_folder = 'an output folder' --preprocessing = TRUE
+
 ```
 
     - *Option 2 (if you have downloaded the final dataset with the preprocessing already done):* preprocessing = FALSE
