@@ -35,7 +35,7 @@ def treatement_test(df_X_test, coords):
     #Création de l'Id 
     df_X_test["Id"] = df_X_test["Id"].apply(lambda x: x.split('_')[0]+'_'+x.split('_')[1])
     #Création de la variable 'day' et 'number_sta'
-    df_X_test["date"] = df_X_test["Id"].apply(lambda x: x.split('_')[1])
+    df_X_test["date"] = df_X_test["Id"].apply(lambda x: x.split('_')[1]).astype('int')
     df_X_test["number_sta"] = df_X_test["Id"].apply(lambda x: x.split('_')[0])
     #ffill et bfill par station et par jour
     df_X_test = pre_traitement.fill_na_hour(df_X_test, 'date')
