@@ -54,7 +54,7 @@ lien2
 ## Train the model and get the predictions
 
 - Run the train.py, with the following arguments: 
-  - data_path = './data_station/', 
+  - data_path = './data_station/', ## A modifier selon l'option (dossier data) 
   - output_folder: an output folder, where you will get the predictions,
   - preprocessing:
     - *Option 1 (if you have downloaded all the data on your computer):* preprocessing = TRUE
