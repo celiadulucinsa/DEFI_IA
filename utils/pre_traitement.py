@@ -112,17 +112,6 @@ def add_coords(coords, df):
     return df
 
 # On clip les outliers
-#def find_outliers(series):
-#    return (series - series.mean()) > 1.5 * series.std() # ou 2.4
-
-
-#def cap_values(series):
-#    outliers = find_outliers(series)
-#    max_val = series[~outliers].max()
-#    print(max_val)
-#    series[outliers] = max_val
-#    return series
-
 def find_outliers(series, q = 1.96):
     positive_outliers = (series[series>0] - series.mean()) >  q * series.std()
     negative_outliers = (series[series<0] - series.mean()) < -q * series.std()
