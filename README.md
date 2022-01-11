@@ -31,8 +31,7 @@ Objective: Predict the accumulated daily rainfall on the D day on the observatio
 - Run the download_data.sh file (in the data folder)
 
 ```
-cd data
-sh download_data.sh
+sh data/download_data.sh
 ```
 - Go on Kaggle website -> profile -> Account -> Create New API Token
 - Move the kaggle.json into the data_station folder
@@ -43,15 +42,14 @@ kaggle competitions download -c defi-ia-2022
 ```
 - Unzip the kaggle data running :
 ```
-sh unzip_data.sh
+sh data/unzip_data.sh
 ```
 ### Option 2
 
 - Download the csv files using the following commands
 ```
-cd data
-wget https://drive.google.com/uc?export=download&id=1UFRhVIOeXBG0N-5KFDnzRbrnmJhPbCKY
-wget https://drive.google.com/uc?export=download&id=1Qq20yHfeReGOVdv8XiriVu55EkI8I3rH
+wget -P data https://drive.google.com/uc?export=download&id=1UFRhVIOeXBG0N-5KFDnzRbrnmJhPbCKY
+wget -P data https://drive.google.com/uc?export=download&id=1Qq20yHfeReGOVdv8XiriVu55EkI8I3rH
 ```
 
 ## Train the model and get the predictions
