@@ -35,7 +35,7 @@ def main():
  		os.makedirs(output_folder)
 	
 	if args.preprocessing: #option1
-        df_train, df_X_test = preprocessing.preprocessing()
+        	df_train, df_X_test = preprocessing.preprocessing()
 
  	else: #option2
 		df_train = pd.read_csv("df_train_nan_by_missforest.csv")  
