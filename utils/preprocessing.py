@@ -86,10 +86,10 @@ def add_forecast3D(df_train, df_X_test, coords):
     return df_train, df_X_test
 
 
-def preprocessing():
+def preprocessing(data_path): 
 
-
-    path_coords = '../data_station/'
+    #à modif
+    path_coords = '.' + data_path + '/data_station/'
     path_train = '../data_station/'
     path_test = '../data_station/'
     path_baseline ='../data_station/'
