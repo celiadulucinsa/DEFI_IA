@@ -46,11 +46,12 @@ sh unzip_data.sh
 ```
 ### Option 2
 
-- Download the csv files following these links in the current folder
+- Download the csv files using the following commands
 ```
-https://drive.google.com/file/d/1UFRhVIOeXBG0N-5KFDnzRbrnmJhPbCKY/view?usp=sharing
-lien2
+wget https://drive.google.com/uc?export=download&id=1UFRhVIOeXBG0N-5KFDnzRbrnmJhPbCKY
+wget https://drive.google.com/uc?export=download&id=1Qq20yHfeReGOVdv8XiriVu55EkI8I3rH
 ```
+
 ## Train the model and get the predictions
 
 - Run the train.py, with the following arguments: 
