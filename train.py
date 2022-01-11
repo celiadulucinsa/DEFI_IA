@@ -38,8 +38,8 @@ def main():
         	df_train, df_X_test = preprocessing.preprocessing(data_path = data_path) # créer le dossier data!!! en amont dans le readme!
 
  	else: #option2
-		df_train = pd.read_csv(f'{data_path}/df_train_nan_by_missforest.csv")  # modif le nom sur le drive + regénérer lien? #modif dans le read me!
-		df_X_test = pd.read_csv("df_X_test_nan_by_missforest.csv") #idem , #à modif
+		df_train = pd.read_csv(f'{data_path}/df_train.csv')  
+		df_X_test = pd.read_csv(f'{data_path}/df_X_test.csv")
 		
 	
 	# Split the training dataset
