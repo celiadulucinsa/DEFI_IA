@@ -48,8 +48,8 @@ sh data/unzip_data.sh
 
 - Download the csv files using the following commands
 ```
-wget https://drive.google.com/uc?export=download&id=1UFRhVIOeXBG0N-5KFDnzRbrnmJhPbCKY
-wget https://drive.google.com/uc?export=download&id=1Qq20yHfeReGOVdv8XiriVu55EkI8I3rH
+wget -P data https://drive.google.com/uc?export=download&id=1UFRhVIOeXBG0N-5KFDnzRbrnmJhPbCKY
+wget -P data https://drive.google.com/uc?export=download&id=1Qq20yHfeReGOVdv8XiriVu55EkI8I3rH
 ```
 
 ## Train the model and get the predictions
