@@ -1,5 +1,6 @@
 # AIF
-├── __report_INSA_MA__: report of our project  
+├── __slides_defi_IA.pdf__: slides of our project    
+├── __report_INSA_MA.pdf__: report of our project  
 ├── __Data__: all the data are stored in this folder   
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;├── __X_precip_train.csv__ Each row contains 24 values corresponding to 24 hours of day D-1   
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;├── __y_train.csv__ Each row contains 1 value corresponding to cumulative rainfall of day D   
