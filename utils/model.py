@@ -21,7 +21,7 @@ def get_model(shape,n_layers,n_neurons):
    
     model.add(keras.layers.Dense(1, name='Output'))
     model.compile(optimizer = 'adam', 
-                  loss      = MAPELoss,
+                  loss      = 'mae',
                   metrics   = ['mae', 'mse', MAPELoss] )
     return model
     
@@ -29,6 +29,12 @@ def get_model(shape,n_layers,n_neurons):
 def init_model(shape, n_layers = 20, n_neurons = 32): 
     model_reg_nn = get_model(shape, n_layers, n_neurons)
     return model_reg_nn
+
+# Function to evaluate the model
+def MAPEVal(y_pred, y_true):
+    n = np.shape(y_true)[0]
+    m = 100/n*sum(abs((y_true[i] - y_pred[i])/(y_true[i]+1)) for i in range(n))
+    return m
     
 
     
