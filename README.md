@@ -61,10 +61,10 @@ wget https://drive.google.com/uc?export=download&id=1Qq20yHfeReGOVdv8XiriVu55EkI
   - preprocessing:
     - *Option 1 (if you have downloaded all the data on your computer):* preprocessing = TRUE
       ```
-      python train.py --data_path = './data_station' --output_folder = <OUTPUT_FOLDER> --preprocessing = TRUE
+      python train.py --data_path = './data' --output_folder = <OUTPUT_FOLDER> --preprocessing = TRUE
       ```
     - *Option 2 (if you have downloaded the final dataset with the preprocessing already done):* preprocessing = FALSE
       ```
-      python train.py --data_path = './data_station' --output_folder = <OUTPUT_FOLDER> --preprocessing = FALSE
+      python train.py --data_path = './data' --output_folder = <OUTPUT_FOLDER> --preprocessing = FALSE
       ```
 
