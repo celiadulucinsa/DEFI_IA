@@ -31,6 +31,7 @@ Objective: Predict the accumulated daily rainfall on the D day on the observatio
 - Run the download_data.sh file (in the data folder)
 
 ```
+cd data
 sh download_data.sh
 ```
 - Go on Kaggle website -> profile -> Account -> Create New API Token
