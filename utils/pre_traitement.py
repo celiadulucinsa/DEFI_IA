@@ -112,22 +112,23 @@ def add_coords(coords, df):
     return df
 
 # On clip les outliers
-def find_outliers(series):
-    return (series - series.mean()) > 1.5 * series.std() # ou 2.4
+#def find_outliers(series):
+#    return (series - series.mean()) > 1.5 * series.std() # ou 2.4
 
 
-def cap_values(series):
-    outliers = find_outliers(series)
-    max_val = series[~outliers].max()
-    print(max_val)
-    series[outliers] = max_val
-    return series
+#def cap_values(series):
+#    outliers = find_outliers(series)
+#    max_val = series[~outliers].max()
+#    print(max_val)
+#    series[outliers] = max_val
+#    return series
 
+def find_outliers(series, q = 1.96):
+    positive_outliers = (series[series>0] - series.mean()) >  q * series.std()
+    negative_outliers = (series[series<0] - series.mean()) < -q * series.std()
+    min_treshold = series[series<0][~negative_outliers].min()
+    max_treshold = series[series>0][~positive_outliers].max()
+    return min_treshold, max_treshold
 
-def sep_ech(X_train):
-    # Séparation en échantillon learn et validation selon la distribution des données (de la réponse)
-    X_learn, X_val, y_learn, y_val = scsplit(X_train, X_train['Ground_truth'], stratify = X_train['Ground_truth'], test_size=0.15)
-
-    return X_learn, X_val, y_learn, y_val
     
     
