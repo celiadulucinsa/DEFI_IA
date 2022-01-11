@@ -24,6 +24,11 @@ Objective: Predict the accumulated daily rainfall on the D day on the observatio
 
 ## Download data
 
+Begin by running the following command, to create a folder containing all the data.
+```
+mkdir data
+```
+
 - Option 1 : download all the data on your computer. Warning : data size of 80Gb and time consuming!
 - Option 2 : download the final dataset with all the preprocessing already done. 
 
