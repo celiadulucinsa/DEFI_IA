@@ -35,11 +35,11 @@ def main():
  		os.makedirs(output_folder)
 	
 	if args.preprocessing: #option1
-        	df_train, df_X_test = preprocessing.preprocessing() # rajouter data_path en argument
+        	df_train, df_X_test = preprocessing.preprocessing(data_path = data_path) # créer le dossier data!!! en amont dans le readme!
 
  	else: #option2
-		df_train = pd.read_csv("df_train_nan_by_missforest.csv")  # modif le nom sur le drive + regénérer lien?
-		df_X_test = pd.read_csv("df_X_test_nan_by_missforest.csv") #idem 
+		df_train = pd.read_csv(f'{data_path}/df_train_nan_by_missforest.csv")  # modif le nom sur le drive + regénérer lien? #modif dans le read me!
+		df_X_test = pd.read_csv("df_X_test_nan_by_missforest.csv") #idem , #à modif
 		
 	
 	# Split the training dataset
