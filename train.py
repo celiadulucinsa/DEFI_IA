@@ -34,8 +34,8 @@ def main():
         df_train, df_X_test = preprocessing.preprocessing()
 
  	else: #option2
-		df_train = pd.read_csv("df_train.csv")  ##### quand ces excels ok -> mettre les bons noms sur le drive + mettre bons liens dans readme
-		df_X_test = pd.read_csv("df_X_test.csv") 
+		df_train = pd.read_csv("df_train_nan_by_missforest.csv")  
+		df_X_test = pd.read_csv("df_X_test_nan_by_missforest.csv") 
 
 
 	X_train = df_train.drop(["Ground_truth", "Id", "number_sta", "date"], axis = 1)
