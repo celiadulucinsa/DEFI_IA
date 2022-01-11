@@ -4,12 +4,6 @@ import matplotlib.pyplot as plt
 import datetime as dt
 import xarray as xr
 
-# pour la séparation stratifiée de l'échantillon
-import verstack
-from verstack.stratified_continuous_split import scsplit
-
-from sklearn.preprocessing import StandardScaler # normalisation des données
-
 
 def load_datasets(path_coords, path_train, path_test, path_baseline ):
     # Chargement des coordonnées GPS des stations

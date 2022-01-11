@@ -25,7 +25,7 @@ def get_model(shape,n_layers,n_neurons):
                   metrics   = ['mae', 'mse', MAPELoss] )
     return model
     
-# Init du modèle
+# Initialisation of the model
 def init_model(shape, n_layers = 20, n_neurons = 32): 
     model_reg_nn = get_model(shape, n_layers, n_neurons)
     return model_reg_nn

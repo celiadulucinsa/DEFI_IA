@@ -6,8 +6,7 @@ def train_model(X, y, model, batch_size, epochs):
                     y,
                     epochs          = epochs,
                     batch_size      = batch_size,
-                    verbose         = 1)
-                    #validation_data = (X_val, y_val["Ground_truth"]))
+                    verbose         = 0)
     return model, history
     
 
