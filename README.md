@@ -28,7 +28,7 @@ Objective: Predict the accumulated daily rainfall on the D day on the observatio
 - Option 2 : download the final dataset with all the preprocessing already done. 
 
 ### Option 1
-- Run the download_data.sh 
+- Run the download_data.sh file (in the data folder)
 
 ```
 sh download_data.sh
@@ -48,6 +48,7 @@ sh unzip_data.sh
 
 - Download the csv files using the following commands
 ```
+cd data
 wget https://drive.google.com/uc?export=download&id=1UFRhVIOeXBG0N-5KFDnzRbrnmJhPbCKY
 wget https://drive.google.com/uc?export=download&id=1Qq20yHfeReGOVdv8XiriVu55EkI8I3rH
 ```
