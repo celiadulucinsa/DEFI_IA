@@ -38,8 +38,8 @@ def main():
         	df_train, df_X_test = preprocessing.preprocessing()
 
  	else: #option2
-		df_train = pd.read_csv("df_train_nan_by_missforest.csv")  
-		df_X_test = pd.read_csv("df_X_test_nan_by_missforest.csv") 
+		df_train = pd.read_csv("df_train_nan_by_missforest.csv")  # modif le nom sur le drive + regénérer lien?
+		df_X_test = pd.read_csv("df_X_test_nan_by_missforest.csv") #idem 
 		
 	
 	# Split the training dataset
