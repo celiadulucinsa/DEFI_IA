@@ -6,6 +6,7 @@ import argparse
 import os, sys
 from sklearn.model_selection import train_test_split
 from sklearn import metrics
+from sklearn.preprocessing import StandardScaler
 sys.path.append("utils/")
 
 
@@ -34,19 +35,20 @@ def main():
 	if not os.path.exists(output_folder):
  		os.makedirs(output_folder)
 	
+	# Option 1 : download all the data
 	if args.preprocessing: #option1
         	df_train, df_X_test = preprocessing.preprocessing(data_path = data_path) # créer le dossier data!!! en amont dans le readme!
 
- 	else: #option2
+	# Option 2 : download the dataset already preprocessed
+ 	else: 
 		df_train = pd.read_csv(f'{data_path}/df_train.csv')  
-		df_X_test = pd.read_csv(f'{data_path}/df_X_test.csv")
+		df_X_test = pd.read_csv(f'{data_path}/df_X_test.csv')
 		
 	
 	# Split the training dataset
-	X_train, X_val, y_train, y_val = train_test_split(df_train.drop(["Ground_truth"], axis = 1),
-                                                    df_train["Ground_truth"],
-                                                    test_size=0.10, shuffle=True)
+	X_train, X_val, y_train, y_val = train_test_split(df_train.drop(["Ground_truth"], axis = 1), df_train["Ground_truth"], test_size=0.10, shuffle=True)
 	
+	# Prepare the datasets
 	X_train = X_train.drop(["Id", "number_sta", "date"], axis = 1)
 	X_val = X_val.drop(["number_sta", "date"], axis = 1)
 	X_test = df_X_test.drop(["number_sta", "date"], axis = 1)
