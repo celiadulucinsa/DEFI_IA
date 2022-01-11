@@ -5,9 +5,6 @@ import datetime as dt
 import xarray as xr
 
 
-from sklearn.preprocessing import StandardScaler # normalisation des données
-
-
 def load_datasets(path_coords, path_train, path_test, path_baseline ):
     # Chargement des coordonnées GPS des stations
     coords_path  = path_coords + 'stations_coordinates.csv'
