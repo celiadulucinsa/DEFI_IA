@@ -1,53 +1,50 @@
-# DEFI_IA
-Git repository for the evaluation of the AI frameworks DEFI IA project 2021-2022
+# AIF
+├── __report_INSA_MA__: report of our project  
+├── __Data__: all the data are stored in this folder   
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;├── __X_precip_train.csv__ Each row contains 24 values corresponding to 24 hours of day D-1   
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;├── __y_train.csv__ Each row contains 1 value corresponding to cumulative rainfall of day D   
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;├── __X_precip_test.csv__ Similar to __X_precip_train.csv__  
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;└── __Id_test.csv__ containing the Id's of test set in the order of __X_precip_test.csv__   
+├── __structure.py__: defining the architecture of the neural net     
+└── __train.py__: training model and predicting for test set. All the results of training and testing are saved to output_folder (= Results by default) 
+### Preliminary step: set up virtual environment to work with python
+Create a virtual environment:
+```
+conda create --name AIF python==3.7.12 -c conda-forge
+```
+Notice that the environment here is named AIF, you can choose a name at your convenience.
 
-## How to submit your work
-You must submit your code as a pull request to this repo.
+To work in this environment, we need to activate it: 
+```
+conda activate AIF
+```
+Now this environment is empty. We load packages/libraries necessary for our project:
+```
+pip install -r requirements.txt
+```
+### Training and predicting
+```
+python train.py --data_path=<PATH_TO_YOUR_DATA_FOLDER> --output_folder=<PATH_TO_OUTPUT_FOLDER> --epochs=<NUMBER_OF_EPOCHS> --batch_size=<BATCH_SIZE> --learning_rate=<LEARNING_RATE> --train_val_split=<RATIO>
+```
+By default, we have:
+- data_path=Data
+- output_folder=Results
+- epochs=5
+- batch_size=32
+- learning_rate=1e-3
+- train_val_split=0.2
 
-First make a fork of this repo:
-![](images/fork.png)
-Use git to clone your code in a local repository.
-Create a new branch named with your team number (according to this [file](https://docs.google.com/spreadsheets/d/1UHll3nVPrjPy9EfPd-dGmGaxQGMsWdlEL-FCNmTmgn8/edit#gid=907028874))
-Add and comit your code to this branch and push the branch to your forked repository.  
-Then go to your fork on github, selct your branch and create a pull request.
-![](images/pull_request.png).
-Add your team members in the description and create your pull request.  
-![](images/pull_request2.png)
-Send me an email at bertoin@insa-toulouse.fr to warn me about your pull request.
-I'll get back to you so you can be sure that everything is ok.
+So, normally, for executing the file train.py, once you in the virtual environment, you just need to type in the terminal:
+```
+python train.py
+```
+After execution of this file, it will create output_folder (=Results by default). In this folder, we have following files created:
+- mono_recurrent_model.h5: containing weights after training
+- losses.csv: containing losses of training and validation set over epochs.
+- plot_losses.pdf: containg the plot of training and validation losses
+- Prediction_Kaggle_INSA_MA.csv: the file in good format to be submit on Kaggle
 
-## What should it contain?
-
-Your work must contain:
-
-* the pdf file for your report.
-* a file ```requirement.txt``` containing all the required librairies to run your code.  
-Be sure that all the needed librairies are present in this file.
-Also verify that no unused library is present in this file.
-
-* a python script `train.py` that will train your model and outputs your final trained model as a pickle file and your predictions on the test data in a csv format.
-Your script must take as argument:
-    *  `--data_path`: the path to a folder containing all the data files.
-    Before executing your script, I will create a folder containing all the unziped files obtained when calling the following command: 
-    ```console
-    kaggle competitions download -c defi-ia-2022
-    ```
-    *   `--output_folder`: the path to an input folder where to output your model and predictions.
-    * a file README.md describing a little your code (for exemple which file/class does the data preprocessing, which one defines your model ...)
-
-I will call your script with the following command:
-```console
-python train.py --data_path Data --output_folder Results
-``` 
-Before running this command I will create a virtual env and install the libraries in the `requirements.txt` file.
-I expect your code to run without any bug and to produce the desired outputs.  
-
-Please check that it is the case: create a new virtual environment, clone your repo and run the command:
-
-```console
-python train.py --data_path PATH_TO_YOUR_DATA_FOLDER --output_folder PATH_TO_OUTPUT_FOLDER
-``` 
-If the command does not work for me you won't have the points associated to the coding part of the project.
-
-You will be evaluated on the clarity of your code, I do not expect a single file doing all the work!
-
+If you do not want to use a parameter as default, for example, epochs:
+```
+python train.py --epochs=10
+```
