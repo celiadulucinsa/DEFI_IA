@@ -55,7 +55,7 @@ wget https://drive.google.com/uc?export=download&id=1Qq20yHfeReGOVdv8XiriVu55EkI
 ## Train the model and get the predictions
 
 - Run the train.py, with the following arguments: 
-  - data_path = './data_station/', ## A modifier selon l'option (dossier data) 
+  - data_path = './data', 
   - output_folder: an output folder, where you will get the predictions,
   - preprocessing:
     - *Option 1 (if you have downloaded all the data on your computer):* preprocessing = TRUE
