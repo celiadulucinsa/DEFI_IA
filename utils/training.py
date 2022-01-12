@@ -12,10 +12,10 @@ def train_model(X, y, model, batch_size, epochs):
     return model, history
     
 
-def plot_history(history): 
+def plot_history_function(history): 
     # Plot evolution of losses 
     df= pd.DataFrame(data=history.history)
-    plot_history(df  , interpolate = True , graphs_per_row = 3)
+    plot_history(df  ,style = '-', interpolate = True , graphs_per_row = 3)
     plt.show()
  
 def main(X, y): 
@@ -24,7 +24,7 @@ def main(X, y):
     batch_size = 128
     epochs = 50
     model_trained, history = train_model(X,y, model_init, batch_size, epochs)
-    plot_history(history)
+    plot_history_function(history)
     
     return model_trained 
     
