@@ -23,7 +23,8 @@ def get_args():
 	parser = argparse.ArgumentParser(description="Script to launch defi-ia training", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 	parser.add_argument("--data_path", type = str, help = "path to a folder containing all the data files") 
 	parser.add_argument("--output_folder", type = str,  help = "path to an input folder where to output your model and predictions") 
-	parser.add_argument("--preprocessing", type = bool, help = "if false, preprocessed dataset is downloaded") 
+	parser.add_argument("--no-preprocessing", action = "store_false", dest ='preprocessing')
+	parser.add_argument("--preprocessing", action = "store_true", dest ='preprocessing')
 	return parser.parse_args()
 
 def main(): 
