@@ -88,10 +88,10 @@ def add_forecast3D(df_train, df_X_test, coords, data_path):
 
 def preprocessing(data_path): 
 
-    path_coords = '.' + data_path + '/data_station/'
-    path_train = '.' + data_path + './data_station/'
-    path_test = '.' + data_path + './data_station/'
-    path_baseline ='.' + data_path + './data_station/'
+    path_coords = '.' + data_path + '/data_station/Other/Other/'
+    path_train = '.' + data_path + '/data_station/Train/Train/'
+    path_test = '.' + data_path + '/data_station/Test/Test/'
+    path_baseline ='.' + data_path + '/data_station/Test/Test/Baselines/'
 
     coords, df_X_train, df_X_test, df_Y_train, baseline = pre_traitement.load_datasets(path_coords, path_train, path_test, path_baseline)
     
@@ -109,6 +109,7 @@ def preprocessing(data_path):
     
     
     #missforest
+    print("Begin of the missforest...")
     #pour train
     df_train2 = df_train.drop(["date", "Id", "number_sta"], axis = 1)
     imputer = MissForest()
