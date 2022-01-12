@@ -15,7 +15,7 @@ def train_model(X, y, model, batch_size, epochs):
 def plot_history(history): 
     # Plot evolution of losses 
     df= pd.DataFrame(data=history.history)
-    plot_history(df , style="-" , interpolate = True , graphs_per_row = 3)
+    plot_history(df  , interpolate = True , graphs_per_row = 3)
     plt.show()
  
 def main(X, y): 
