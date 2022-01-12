@@ -1,13 +1,10 @@
 convertdate==2.3.2
 gdown==3.6.4
 google==2.0.3
-google-colab @ file:///colabtools/dist/google-colab-1.0.0.tar.gz
 jupyter==1.0.0
 jupyter-client==5.3.5
 jupyter-console==5.2.0
 jupyter-core==4.9.1
-jupyterlab-pygments==0.1.2
-jupyterlab-widgets==1.0.2
 kaggle==1.5.12
 keras==2.7.0
 Keras-Preprocessing==1.1.2
