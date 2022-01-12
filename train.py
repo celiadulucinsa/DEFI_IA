@@ -35,12 +35,14 @@ def main():
 	if not os.path.exists(output_folder):
  		os.makedirs(output_folder)
 	
-	# Option 1 : download all the data
+	# Option 1 : preprocessing
 	if args.preprocessing: #option1
+		print("Begin of preprocessing...")
         	df_train, df_X_test = preprocessing.preprocessing(data_path = data_path) # créer le dossier data!!! en amont dans le readme!
 
 	# Option 2 : download the dataset already preprocessed
  	else: 
+		print("We use datasets already preprocessed.")
 		df_train = pd.read_csv(f'{data_path}/df_train.csv')  
 		df_X_test = pd.read_csv(f'{data_path}/df_X_test.csv')
 		
@@ -80,17 +82,21 @@ def main():
 	X_test[var_to_fit] =  sts.transform(X_test[var_to_fit])
 
  	# Model training
+	print("Model training ...")
 	model_trained = training.main(X_train, y_train) 
 	
 	# Evaluation of the model on the validation dataset
+	print("Evaluation of the model on the validation ...")
 	y_pred = model_trained.predict(X_val)
-	print("R2 score on the validation dataset: ", metrics.r2_score(y_val, y_pred))
-	print("MAPE score on the validation dataset: ", model.MAPEVal(y_pred, y_val.to_numpy())) 
+	print("R2 score : ", metrics.r2_score(y_val, y_pred))
+	print("MAPE score : ", model.MAPEVal(y_pred, y_val.to_numpy())) 
 	
 	# Prediction on test + save 
+	print("Prediction on the test...")
 	filename = output_folder + "/submission.csv"
 	submit = prediction.prediction(model_trained, X_test, filename)
-
+	print("save in the file " + filename)
+	
  	# Save the model 
 	model_trained.save(output_folder + '/model.h5')
 
