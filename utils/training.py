@@ -1,4 +1,6 @@
 import model
+import pandas as pd
+import matplotlib.pyplot as plt
 from plot_keras_history import plot_history
  
 def train_model(X, y, model, batch_size, epochs): 
