@@ -34,7 +34,7 @@ Objective: Predict the accumulated daily rainfall on the D day on the observatio
 sh data/download_data.sh
 ```
 - Go on Kaggle website -> profile -> Account -> Create New API Token
-- Move the kaggle.json into the data_station folder
+- Move the kaggle.json into the data/data_station folder
 - Run the command:
 
 ```
