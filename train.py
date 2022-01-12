@@ -38,12 +38,12 @@ def main():
 	# Option 1 : preprocessing
 	if args.preprocessing: #option1
 		print("Begin of preprocessing...")
-        	df_train, df_X_test = preprocessing.preprocessing(data_path = data_path) 
-	# Option 2 : download the dataset already preprocessed
- 	else: 
-		print("We use datasets already preprocessed.")
-		df_train = pd.read_csv(f'{data_path}/df_train.csv')  
-		df_X_test = pd.read_csv(f'{data_path}/df_X_test.csv')
+		df_train, df_X_test = preprocessing.preprocessing(data_path = data_path) 
+		# Option 2 : download the dataset already preprocessed
+	else: 
+ 		print("We use datasets already preprocessed.")
+ 		df_train = pd.read_csv(f'{data_path}/df_train.csv')
+ 		df_X_test = pd.read_csv(f'{data_path}/df_X_test.csv')
 		
 	
 	# Split the training dataset
