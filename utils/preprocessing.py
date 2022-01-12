@@ -53,7 +53,7 @@ def treatement_test(df_X_test, coords):
 def add_forecast(coords, df_train, df_X_test, name_forecast, K, data_path):
     # calcul des distances
     model = name_forecast
-    path = "." + data_path + "/data_meteonet/train/X_forecast/" + name_forecast + "_train/"
+    path =  data_path + "/data_meteonet/train/X_forecast/" + name_forecast + "_train/"
     df_distance1 = traitement_forecast.calcul_distance(coords, path, model, K)
     
     
@@ -63,7 +63,7 @@ def add_forecast(coords, df_train, df_X_test, name_forecast, K, data_path):
     df_train = traitement_forecast.add_prevision(p,df_distance1, df_train, path, model, var)
     
     #ajout des prévisions dans X_test
-    path = '.' + data_path + '/data_meteonet/test/' + name_forecast +"/"
+    path =  data_path + '/data_meteonet/test/' + name_forecast +"/"
     df_X_test = df_X_test.sort_values(by=["date", "number_sta"]) #indispensable pour faire traitement_forecast
     df_X_test = traitement_forecast.add_prevision(p,df_distance1,df_X_test, path, model, var = var,bool_train = False) 
     
@@ -73,14 +73,14 @@ def add_forecast(coords, df_train, df_X_test, name_forecast, K, data_path):
 
 def add_forecast3D(df_train, df_X_test, coords, data_path):
     model = 'arpege_3D_height'
-    path = '.' + data_path + '/data_meteonet/train/X_forecast/3D_arpege_train/'
+    path =  data_path + '/data_meteonet/train/X_forecast/3D_arpege_train/'
     p = 1
     K = 3
     df_distance3 = traitement_forecast.calcul_distance(coords, path, model, K)
     
     df_train = traitement_forecast.add_prevision_3D(p,df_distance3, df_train, path, model, bool_train = True)
     
-    path = '.' + data_path + '/data_meteonet/test/3D_arpege/'
+    path =  data_path + '/data_meteonet/test/3D_arpege/'
     df_X_test = traitement_forecast.add_prevision_3D(p,df_distance3, df_X_test, path, model, bool_train = False)
     
     return df_train, df_X_test
@@ -89,9 +89,9 @@ def add_forecast3D(df_train, df_X_test, coords, data_path):
 def preprocessing(data_path): 
 
     path_coords = data_path + '/data_station/Other/Other/'
-    path_train = '.' + data_path + '/data_station/Train/Train/'
-    path_test = '.' + data_path + '/data_station/Test/Test/'
-    path_baseline ='.' + data_path + '/data_station/Test/Test/Baselines/'
+    path_train =  data_path + '/data_station/Train/Train/'
+    path_test = data_path + '/data_station/Test/Test/'
+    path_baseline = data_path + '/data_station/Test/Test/Baselines/'
 
     coords, df_X_train, df_X_test, df_Y_train, baseline = pre_traitement.load_datasets(path_coords, path_train, path_test, path_baseline)
     
