@@ -28,21 +28,17 @@ Objective: Predict the accumulated daily rainfall on the D day on the observatio
 - Option 2 : download the final dataset with all the preprocessing already done. 
 
 ### Option 1
-- Run the download_data.sh file (in the data folder)
+- Run the data_meteonet.sh file (in the data folder). It downloads forecast data.
 
 ```
-sh data/download_data.sh
+sh data/data_meteonet.sh
 ```
 - Go on Kaggle website -> profile -> Account -> Create New API Token
-- Move the kaggle.json into the data/data_station folder
-- Run the command:
+- Move the kaggle.json into the current directory
+- Run the following command to download station data.
 
 ```
-kaggle competitions download -c defi-ia-2022
-```
-- Unzip the kaggle data running :
-```
-sh data/unzip_data.sh
+sh data/data_station.sh
 ```
 ### Option 2
 
