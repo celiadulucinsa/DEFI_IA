@@ -161,7 +161,7 @@ def add_prevision(p,df_distance, df_X, path, model,var, bool_train = True):
     for d in df_X['date'].unique():  
         
         try :
-            print('date :', d)
+            #print('date :', d)
             if bool_train : 
                 data = chargement_data_train(pd.to_datetime(d) + dt.timedelta(days = 1), path, model)
             else : 
@@ -258,7 +258,7 @@ def add_prevision_3D(p,df_distance, df_X, path, model, bool_train = True):
     for d in df_X['date'].unique():  
         
         try :
-            print('date :', d)
+            #print('date :', d)
             if bool_train : 
                 data = chargement_data_train(pd.to_datetime(d)+ dt.timedelta(days = 1), path, model)
             else : 
