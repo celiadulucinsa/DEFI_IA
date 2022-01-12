@@ -44,8 +44,8 @@ sh data/data_station.sh
 
 - Download the csv files using the following commands
 ```
-wget -P data https://drive.google.com/uc?export=download&id=1UFRhVIOeXBG0N-5KFDnzRbrnmJhPbCKY
-wget -P data https://drive.google.com/uc?export=download&id=1Qq20yHfeReGOVdv8XiriVu55EkI8I3rH
+gdown --id 1UFRhVIOeXBG0N-5KFDnzRbrnmJhPbCKY -O data/df_train.csv 
+gdown --id 1Qq20yHfeReGOVdv8XiriVu55EkI8I3rH -O data/df_X_test.csv
 ```
 
 ## Train the model and get the predictions
