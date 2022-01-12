@@ -7,6 +7,7 @@ import os, sys
 from sklearn.model_selection import train_test_split
 from sklearn import metrics
 from sklearn.preprocessing import StandardScaler
+from tensorflow import keras
 sys.path.append("utils/")
 
 
@@ -52,7 +53,7 @@ def main():
 	
 	# Prepare the datasets
 	X_train = X_train.drop(["Id", "number_sta", "date"], axis = 1)
-	X_val = X_val.drop(["number_sta", "date"], axis = 1)
+	X_val = X_val.drop(["number_sta", "date", "Id"], axis = 1)
 	X_test = df_X_test.drop(["number_sta", "date"], axis = 1)
 	
 	# Clip the outliers for the response variable
@@ -80,12 +81,18 @@ def main():
 	X_train[var_to_fit] = sts.transform(X_train[var_to_fit])
 	X_val[var_to_fit] = sts.transform(X_val[var_to_fit])
 	X_test[var_to_fit] =  sts.transform(X_test[var_to_fit])
-
+	print(type(X_train))
+	print(type(X_val))
+	print(type(X_test))
  	# Model training
 	print("Model training ...")
 	model_trained = training.main(X_train, y_train) 
-	
+
+	# Save the model 
+	model_trained.save(output_folder + '/model.h5')
+	#model_trained = keras.models.load_model(output_folder  + '/model.h5')
 	# Evaluation of the model on the validation dataset
+	print(type(X_val))
 	print("Evaluation of the model on the validation ...")
 	y_pred = model_trained.predict(X_val)
 	print("R2 score : ", metrics.r2_score(y_val, y_pred))
@@ -97,8 +104,7 @@ def main():
 	submit = prediction.prediction(model_trained, X_test, filename)
 	print("save in the file " + filename)
 	
- 	# Save the model 
-	model_trained.save(output_folder + '/model.h5')
+ 	
 
 
 if __name__ == "__main__":
