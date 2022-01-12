@@ -31,7 +31,7 @@ def treatement_train(df_X_train, coords, df_Y_train):
     return df_train
 
 
-def treatement_test(df_X_test, coords):
+def treatement_test(df_X_test, coords, baseline):
     #Création de l'Id 
     df_X_test["Id"] = df_X_test["Id"].apply(lambda x: x.split('_')[0]+'_'+x.split('_')[1])
     #Création de la variable 'day' et 'number_sta'
@@ -97,7 +97,7 @@ def preprocessing(data_path):
     
     # treatement X_station
     df_train = treatement_train(df_X_train, coords, df_Y_train)
-    df_X_test = treatement_test(df_X_test, coords)
+    df_X_test = treatement_test(df_X_test, coords, baseline)
     
     #treatement forecast data
     # liste des variables présentes dans forecast
