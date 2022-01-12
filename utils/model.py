@@ -1,4 +1,5 @@
 import tensorflow
+tensorflow.get_logger().setLevel('INFO')
 from tensorflow import keras
 import keras.backend as K
 
