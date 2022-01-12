@@ -50,7 +50,7 @@ def treatement_test(df_X_test, coords, baseline):
     return df_X_test
 
 
-def add_forecast(coords, df_train, df_X_test, name_forecast, K, data_path):
+def add_forecast(coords, df_train, df_X_test, name_forecast, data_path, var, K):
     # calcul des distances
     model = name_forecast
     path =  data_path + "/data_meteonet/train/X_forecast/" + name_forecast + "_train/"
@@ -103,8 +103,8 @@ def preprocessing(data_path):
     # liste des variables présentes dans forecast
     var = ["ws", "p3031", "u10", "v10", "t2m", "d2m", "r", "tp", "msl"]
     
-    df_train, df_X_test = add_forecast(coords, df_train, df_X_test, "2D_arome", data_path, K=5)
-    df_train, df_X_test = add_forecast(coords, df_train, df_X_test, "2D_arpege", data_path, K=3)
+    df_train, df_X_test = add_forecast(coords, df_train, df_X_test, "2D_arome", data_path, var, K=5)
+    df_train, df_X_test = add_forecast(coords, df_train, df_X_test, "2D_arpege", data_path, var, K=3)
     df_train, df_X_test = add_forecast3D(df_train, df_X_test, coords, data_path)
     
     
