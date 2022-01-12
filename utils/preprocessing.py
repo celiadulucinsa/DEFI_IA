@@ -103,8 +103,8 @@ def preprocessing(data_path):
     # liste des variables présentes dans forecast
     var = ["ws", "p3031", "u10", "v10", "t2m", "d2m", "r", "tp", "msl"]
     
-    df_train, df_X_test = add_forecast(coords, df_train, df_X_test, "2D_arome", K=5, data_path)
-    df_train, df_X_test = add_forecast(coords, df_train, df_X_test, "2D_arpege", K=3, data_path)
+    df_train, df_X_test = add_forecast(coords, df_train, df_X_test, "2D_arome", data_path, K=5)
+    df_train, df_X_test = add_forecast(coords, df_train, df_X_test, "2D_arpege", data_path, K=3)
     df_train, df_X_test = add_forecast3D(df_train, df_X_test, coords, data_path)
     
     
