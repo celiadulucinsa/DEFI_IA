@@ -38,8 +38,7 @@ def main():
 	# Option 1 : preprocessing
 	if args.preprocessing: #option1
 		print("Begin of preprocessing...")
-        	df_train, df_X_test = preprocessing.preprocessing(data_path = data_path) # créer le dossier data!!! en amont dans le readme!
-
+        	df_train, df_X_test = preprocessing.preprocessing(data_path = data_path) 
 	# Option 2 : download the dataset already preprocessed
  	else: 
 		print("We use datasets already preprocessed.")
