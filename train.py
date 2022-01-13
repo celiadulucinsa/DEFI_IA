@@ -81,9 +81,7 @@ def main():
 	X_train[var_to_fit] = sts.transform(X_train[var_to_fit])
 	X_val[var_to_fit] = sts.transform(X_val[var_to_fit])
 	X_test[var_to_fit] =  sts.transform(X_test[var_to_fit])
-	print(type(X_train))
-	print(type(X_val))
-	print(type(X_test))
+
  	# Model training
 	print("Model training ...")
 	model_trained = training.main(X_train, y_train) 
@@ -91,12 +89,12 @@ def main():
 	# Save the model 
 	model_trained.save(output_folder + '/model.h5')
 	#model_trained = keras.models.load_model(output_folder  + '/model.h5')
+	
 	# Evaluation of the model on the validation dataset
-	print(type(X_val))
 	print("Evaluation of the model on the validation ...")
 	y_pred = model_trained.predict(X_val)
 	print("R2 score : ", metrics.r2_score(y_val, y_pred))
-	print("MAPE score : ", model.MAPEVal(y_pred, y_val.to_numpy())) 
+	print("MAPE score : ", model.MAPEVal(y_pred, y_val.to_numpy())[0]) 
 	
 	# Prediction on test + save 
 	print("Prediction on the test...")
