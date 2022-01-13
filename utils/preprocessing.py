@@ -92,17 +92,19 @@ def preprocessing(data_path):
     path_train =  data_path + '/data_station/Train/Train/'
     path_test = data_path + '/data_station/Test/Test/'
     path_baseline = data_path + '/data_station/Test/Test/Baselines/'
+    print("Load data...")
 
     coords, df_X_train, df_X_test, df_Y_train, baseline = pre_traitement.load_datasets(path_coords, path_train, path_test, path_baseline)
     
     # treatement X_station
+    print("X_station treatment...")
     df_train = treatement_train(df_X_train, coords, df_Y_train)
     df_X_test = treatement_test(df_X_test, coords, baseline)
     
     #treatement forecast data
     # liste des variables présentes dans forecast
     var = ["ws", "p3031", "u10", "v10", "t2m", "d2m", "r", "tp", "msl"]
-    
+    print("X_forecast treatment...")
     df_train, df_X_test = add_forecast(coords, df_train, df_X_test, "2D_arome", data_path, var, K=5)
     df_train, df_X_test = add_forecast(coords, df_train, df_X_test, "2D_arpege", data_path, var, K=3)
     df_train, df_X_test = add_forecast3D(df_train, df_X_test, coords, data_path)
@@ -133,6 +135,9 @@ def preprocessing(data_path):
     df2["number_sta"] = df_X_test["number_sta"]
     
     df_X_test = df2
+
+    df_train.to_csv(data_path + "/df_train_preprocessed.csv", index = False)
+    df_X_test.to_csv(data_path + "/df_test_preprocessed.csv", index = False)
     
     
     return df_train, df_X_test
