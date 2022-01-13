@@ -24,7 +24,7 @@ def get_model(shape,n_layers,n_neurons):
     model.add(keras.layers.Dense(1, name='Output'))
     model.compile(optimizer = 'adam', 
                   loss      = 'mae',
-                  metrics   = ['mae', 'mse', MAPELoss] )
+                  metrics   = ['mae', 'mse'] )
     return model
     
 # Initialisation of the model
